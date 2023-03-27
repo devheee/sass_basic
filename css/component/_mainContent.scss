@@ -1,0 +1,18 @@
+.mainContent {
+    @include section;
+    @include position;
+
+    .content {
+        @include inner;
+        @include flex;
+
+        &>* {
+            flex: 1;
+            background: $mc;
+        }
+    }
+
+    .dot {
+        @include position(absolute, 0, auto, auto, 0, 999);
+    }
+}
